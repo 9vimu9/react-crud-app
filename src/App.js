@@ -9,6 +9,12 @@ class App extends React.Component {
         console.log(event.target.value)
         // alert("ffffffff");
     }
+    onSubmit(event)
+    {
+        event.preventDefault();
+        alert("submitted")
+
+    }
 
 
     render() {
@@ -32,7 +38,9 @@ class App extends React.Component {
                             )
                         }
                     </ul>
-                    <input type="text" onChange={this.onChange}/>
+                    <form onSubmit={this.onSubmit}>
+                        <input type="text" onChange={this.onChange}/>
+                    </form>
                 </header>
             </div>
         );
