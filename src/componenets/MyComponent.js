@@ -8,6 +8,10 @@ const myComponentPropTypes ={
     subTitle:PropTypes.string.isRequired
 };
 
+const myComponentDefautlProps ={
+    subTitle:"default subtitle"
+}
+
 class MyComponent extends Component {
 
 
@@ -24,4 +28,5 @@ class MyComponent extends Component {
     }
 }
 MyComponent.prototypes = myComponentPropTypes;
+MyComponent.defaultProps = myComponentDefautlProps;
 export default MyComponent;
