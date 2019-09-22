@@ -15,18 +15,19 @@ class App extends React.Component {
 
     renderTitle()
     {
-        if(!this.state.shouldRenderTitle)
-        {
-            return null;
-        }
-        return <h1>Title</h1>
+
+        return this.state.shouldRenderTitle
     }
 
     render() {
 
         return (
             <div className="App">
-                {this.renderTitle()}
+                {
+                    this.renderTitle()
+                    ? <h1>totle</h1>
+                    :null
+                }
             </div>
         );
     }
