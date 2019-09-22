@@ -9,8 +9,15 @@ class App extends React.Component {
         this.state={//use state inside constructor
             title:"app title"
         };
-        this.onSubmit = this.onSubmit.bind(this)
+        this.onClick = this.onClick.bind(this)
 
+    }
+
+    onClick()
+    {
+        this.setState({
+            title:"new title"
+        })
     }
 
 
@@ -33,6 +40,7 @@ class App extends React.Component {
         return (
             <div className="App">
                 <h1>{this.state.title}</h1>
+                <div onClick={this.onClick}>click here</div>
             </div>
         );
     }
