@@ -8,7 +8,8 @@ class MyComponent extends Component {
 
         return (
             <div className="MyComponent">
-                <h1>this is a component that is dropped into another component</h1>
+                <h1>Title: {this.props.title}</h1>
+                <h2>sub Title: {this.props.subTitle}</h2>
             </div>
         );
     }
