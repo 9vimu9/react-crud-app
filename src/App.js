@@ -46,6 +46,7 @@ class App extends React.Component {
                 <MyComponent
                     title="this is title"
                     subTitle="this is sub title"
+                    onClick={this.onClick}
                 />
             </div>
         );
