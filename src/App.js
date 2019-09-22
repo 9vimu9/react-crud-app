@@ -6,6 +6,9 @@ class App extends React.Component {
     constructor(props)
     {
         super(props)
+        this.state={//use state inside constructor
+            title:"app title"
+        };
         this.onSubmit = this.onSubmit.bind(this)
 
     }
@@ -26,30 +29,10 @@ class App extends React.Component {
 
 
     render() {
-        var head ="gggg"
-        const list = ["232","fcadfaef"];
 
         return (
             <div className="App">
-                <header className="App-header">
-                    <h1>{head}</h1>
-                    <ul>
-                        {
-                            list.map(
-                                item => {
-                                    return (
-                                        <li key={item}>
-                                            <div >{item}</div>
-                                        </li>
-                                    );
-                                }
-                            )
-                        }
-                    </ul>
-                    <form onSubmit={this.onSubmit}>
-                        <input name ="user_name" type="text" onChange={this.onChange} ref={user_name=>this.userName=user_name}/>
-                    </form>
-                </header>
+                <h1>{this.state.title}</h1>
             </div>
         );
     }
