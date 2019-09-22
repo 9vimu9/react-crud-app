@@ -4,10 +4,10 @@ import './App.css';
 class App extends React.Component {
 
 
-    helloWorld()
+    onChange(event)
     {
-        console.log("ffffffffffffffffff")
-        alert("ffffffff");
+        console.log(event.target.value)
+        // alert("ffffffff");
     }
 
 
@@ -25,13 +25,14 @@ class App extends React.Component {
                                 item => {
                                     return (
                                         <li key={item}>
-                                            <div onClick={this.helloWorld}>{item}</div>
+                                            <div >{item}</div>
                                         </li>
                                     );
                                 }
                             )
                         }
                     </ul>
+                    <input type="text" onChange={this.onChange}/>
                 </header>
             </div>
         );
