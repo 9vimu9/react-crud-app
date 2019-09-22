@@ -8,16 +8,16 @@ class App extends React.Component {
     {
         super(props)
         this.state={//use state inside constructor this good for set initial values
-            name:"enter your name here",
+            checked:true,
         };
-        this.updateName = this.updateName.bind(this)
+        this.updateCheck = this.updateCheck.bind(this)
 
     }
 
-updateName(event)
+updateCheck()
 {
     this.setState({
-       name:event.target.value
+       checked:!this.state.checked
     });
 }
 
@@ -25,10 +25,10 @@ updateName(event)
 
         return (
             <div className="App">
-                <input type="text"
+                <input type="checkbox"
                        name="name"
-                       onChange={this.updateName}
-                       value={this.state.name} />
+                       onChange={this.updateCheck}
+                       checked={this.state.checked} />
             </div>
         );
     }
