@@ -9,7 +9,8 @@ class App extends React.Component {
     {
         super(props)
         this.state={//use state inside constructor
-            title:"app title"
+            title:"initial title",
+            subTitle:"initial subtitle"
         };
         this.onClick = this.onClick.bind(this)
 
@@ -18,7 +19,8 @@ class App extends React.Component {
     onClick()
     {
         this.setState({
-            title:"new title"
+            title:"title after clikced",
+            subTitle:"subtitle after clicled"
         })
     }
 
@@ -41,11 +43,10 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <h1>{this.state.title}</h1>
                 <div onClick={this.onClick}>click here</div>
                 <MyComponent
-                    title="this is title"
-                    // subTitle="this is sub title"
+                    title={this.state.title}
+                    subTitle={this.state.subTitle}
                     onClick={this.onClick}
                 />
             </div>

@@ -22,7 +22,7 @@ class MyComponent extends Component {
             <div className="MyComponent">
                 <h1>Title: {title}</h1>
                 <h2>sub Title: {subTitle}</h2>
-                <div onClick={onClick}>clcik me babes</div>
+                <div onClick={onClick}>mycomponent clicker</div>
             </div>
         );
     }
