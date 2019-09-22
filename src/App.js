@@ -3,6 +3,13 @@ import './App.css';
 
 class App extends React.Component {
 
+    constructor(props)
+    {
+        super(props)
+        this.onSubmit = this.onSubmit.bind(this)
+
+    }
+
 
     onChange(event)
     {
@@ -11,6 +18,7 @@ class App extends React.Component {
     }
     onSubmit(event)
     {
+        console.log(this.userName.value)
         event.preventDefault();
         alert("submitted")
 
@@ -39,7 +47,7 @@ class App extends React.Component {
                         }
                     </ul>
                     <form onSubmit={this.onSubmit}>
-                        <input type="text" onChange={this.onChange}/>
+                        <input name ="user_name" type="text" onChange={this.onChange} ref={user_name=>this.userName=user_name}/>
                     </form>
                 </header>
             </div>
