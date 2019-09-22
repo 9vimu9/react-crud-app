@@ -6,10 +6,11 @@ class MyComponent extends Component {
 
     render() {
 
+        const {title,subtitle} = this.props
         return (
             <div className="MyComponent">
-                <h1>Title: {this.props.title}</h1>
-                <h2>sub Title: {this.props.subTitle}</h2>
+                <h1>Title: {title}</h1>
+                <h2>sub Title: {subtitle}</h2>
             </div>
         );
     }
