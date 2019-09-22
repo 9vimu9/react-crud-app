@@ -1,54 +1,34 @@
 import React from 'react';
 import './App.css';
 import './componenets/MyComponent'
-import MyComponent from "./componenets/MyComponent";
 
 class App extends React.Component {
 
     constructor(props)
     {
         super(props)
-        this.state={//use state inside constructor
-            title:"initial title",
-            subTitle:"initial subtitle"
+        this.state={//use state inside constructor this good for set initial values
+            name:"enter your name here",
         };
-        this.onClick = this.onClick.bind(this)
+        this.updateName = this.updateName.bind(this)
 
     }
 
-    onClick()
-    {
-        this.setState({
-            title:"title after clikced",
-            subTitle:"subtitle after clicled"
-        })
-    }
-
-
-    onChange(event)
-    {
-        console.log(event.target.value)
-        // alert("ffffffff");
-    }
-    onSubmit(event)
-    {
-        console.log(this.userName.value)
-        event.preventDefault();
-        alert("submitted")
-
-    }
-
+updateName(event)
+{
+    this.setState({
+       name:event.target.value
+    });
+}
 
     render() {
 
         return (
             <div className="App">
-                <div onClick={this.onClick}>click here</div>
-                <MyComponent
-                    title={this.state.title}
-                    subTitle={this.state.subTitle}
-                    onClick={this.onClick}
-                />
+                <input type="text"
+                       name="name"
+                       onChange={this.updateName}
+                       value={this.state.name} />
             </div>
         );
     }
